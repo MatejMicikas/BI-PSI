@@ -183,7 +183,13 @@ Komunikaci s roboty lze rozdělit do několika fází:
   
 Server i klient oba znají dvojici autentizačních klíčů (nejedná se o veřejný a soukromý klíč):
 
-<div style="display: flex; align-items: center; justify-content: center;">
+<style>
+.tab {
+    display: flex;
+    justify-content: center;
+}
+</style>
+<div class="tab">
   <table class="inline">
       <tbody>
         <tr class="row0">
