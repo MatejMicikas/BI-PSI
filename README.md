@@ -4,18 +4,21 @@
 ## <a name="anotace" id="anotace">Anotace</a>
 
 <div class="level2">
+
 Cílem úlohy je vytvořit vícevláknový server pro TCP/IP komunikaci a implementovat komunikační protokol podle dané specifikace. Pozor, implementace klientské části není součástí úlohy! Klientskou část realizuje testovací prostředí.
 </div>
 
 ## <a name="zadani" id="zadani">Zadání</a>
 
 <div class="level2">
+
 Vytvořte server pro automatické řízení vzdálených robotů. Roboti se sami přihlašují k serveru a ten je navádí ke středu souřadnicového systému. Pro účely testování každý robot startuje na náhodných souřadnicích a snaží se dojít na souřadnici [0,0]. Na cílové souřadnici musí robot vyzvednout tajemství. Po cestě k cíli mohou roboti narazit na překážky, které musí obejít. Server zvládne navigovat více robotů najednou a implementuje bezchybně komunikační protokol.
 </div>
 
 ## <a name="detailni_specifikace" id="detailni_specifikace">Detailní specifikace</a>
 
 <div class="level2">
+
 Komunikace mezi serverem a roboty je realizována plně textovým protokolem. Každý příkaz je zakončen dvojicí speciálních symbolů „\a\b“. (Jsou to dva znaky '\a' a '\b'.) Server musí dodržet komunikační protokol do detailu přesně, ale musí počítat s nedokonalými firmwary robotů (viz sekce Speciální situace).
 
 Zprávy serveru:
@@ -169,16 +172,51 @@ Zprávy klienta:
       </tr>
     </tbody>
   </table>
+  
 Komunikaci s roboty lze rozdělit do několika fází:
+
 </div>
 
 ### <a name="autentizace" id="autentizace">Autentizace</a>
 
 <div class="level3">
+  
 Server i klient oba znají dvojici autentizačních klíčů (nejedná se o veřejný a soukromý klíč):
 
-*   <div class="li">Klíč serveru: 54621</div>
-*   <div class="li">Klíč klienta: 45328</div>
+<table class="inline">
+    <tbody>
+      <tr class="row0">
+        <th class="col0">Key ID</th>
+        <th class="col1">Server Key</th>
+        <th class="col2">Client Key</th>
+      </tr>
+      <tr class="row1">
+        <td class="col0">0</td>
+        <td class="col1">23019</td>
+        <td class="col2">32037</td>
+      </tr>
+      <tr class="row2">
+        <td class="col0">1</td>
+        <td class="col1">32037</td>
+        <td class="col2">29295</td>
+      </tr>
+      <tr class="row3">
+        <td class="col0">2</td>
+        <td class="col1">18789</td>
+        <td class="col2">13603</td>
+      </tr>
+      <tr class="row4">
+        <td class="col0">3</td>
+        <td class="col1">16443</td>
+        <td class="col2">29533</td>
+      </tr>
+      <tr class="row5">
+        <td class="col0">4</td>
+        <td class="col1">18189</td>
+        <td class="col2">21952</td>
+      </tr>
+    </tbody>
+</table>
 
 Každý robot začne komunikaci odesláním svého uživatelského jména (zpráva CLIENT_USERNAME). Uživatelské jméno múže být libovolná sekvence 18 znaků neobsahující sekvenci „\a\b“. V dalším kroku vyzve server klienta k odeslání Key ID (zpráva SERVER_KEY_REQUEST), což je vlastně identifikátor dvojice klíčů, které chce použít pro autentizaci. Klient odpoví zprávou CLIENT_KEY_ID, ve které odešle Key ID. Po té server zná správnou dvojici klíčů, takže může spočítat "hash" kód z uživatelského jména podle následujícího vzorce:
 
@@ -277,17 +315,20 @@ Každý z robotů má omezený zdroj energie. Pokud mu začne docházet baterie,
 
 ```Klient                    Server
 ------------------------------------------
-CLIENT_USER       --->
-                  <---    SERVER_CONFIRMATION
-CLIENT_RECHARGING --->
+CLIENT_USER         --->
+                    <---    SERVER_CONFIRMATION
+CLIENT_RECHARGING   --->
 
       ...
 
-CLIENT_FULL_POWER --->
-CLIENT_CONFIRMATION   --->
-                  <---    SERVER_OK
-                            nebo
-                          SERVER_LOGIN_FAILED
+CLIENT_FULL_POWER   --->
+CLIENT_CONFIRMATION --->
+                    <---    SERVER_OK
+                              nebo
+                            SERVER_LOGIN_FAILED
+                      .
+                      .
+                      .
 ```
 
 Další ukázka:
