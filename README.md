@@ -182,9 +182,8 @@ Komunikaci s roboty lze rozdělit do několika fází:
 <div class="level3">
   
 Server i klient oba znají dvojici autentizačních klíčů (nejedná se o veřejný a soukromý klíč):
-
-<div style="text-align:center;">
-  <table class="inline">
+<div align="center">
+  <table style="margin: 0 auto;">
       <tbody>
         <tr class="row0">
           <th class="col0">Key ID</th>
