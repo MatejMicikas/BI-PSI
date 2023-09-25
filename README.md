@@ -478,9 +478,7 @@ Stáhněte a rozbalte obraz. Výsledný soubor spusťte ve VirtualBoxu. Po spuš
 
 Prvním parametrem je číslo portu, na kterém bude naslouchat váš server. Následuje parametr se vzdálenou adresou serveru. Pokud je váš server spuštěn na stejném počítači jako VirtualBox, použijte adresu defaultní brány. Postup je naznačen na následujícím obrázku:
 
-<div align="center">
 ![Tester](https://github.com/MatejMicikas/BI-PSI/blob/main/testing-image-example.png)
-</div>
 
 Výstup je poměrně dlouhý, proto je výhodné přesměrovat jej příkazu less, ve kterém se lze dobře pohybovat, nebo lze použít klávesovou kombinaci "Shift₊PageUp" nebo "Shift+PageDown" pro pohyb ve.- výstupu nahoru nebo dolu (historie je však krátká, nelze se posunout moc daleko nazpět).
 
