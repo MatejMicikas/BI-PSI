@@ -183,40 +183,42 @@ Komunikaci s roboty lze rozdělit do několika fází:
   
 Server i klient oba znají dvojici autentizačních klíčů (nejedná se o veřejný a soukromý klíč):
 
-<table class="inline">
-    <tbody>
-      <tr class="row0">
-        <th class="col0">Key ID</th>
-        <th class="col1">Server Key</th>
-        <th class="col2">Client Key</th>
-      </tr>
-      <tr class="row1">
-        <td class="col0">0</td>
-        <td class="col1">23019</td>
-        <td class="col2">32037</td>
-      </tr>
-      <tr class="row2">
-        <td class="col0">1</td>
-        <td class="col1">32037</td>
-        <td class="col2">29295</td>
-      </tr>
-      <tr class="row3">
-        <td class="col0">2</td>
-        <td class="col1">18789</td>
-        <td class="col2">13603</td>
-      </tr>
-      <tr class="row4">
-        <td class="col0">3</td>
-        <td class="col1">16443</td>
-        <td class="col2">29533</td>
-      </tr>
-      <tr class="row5">
-        <td class="col0">4</td>
-        <td class="col1">18189</td>
-        <td class="col2">21952</td>
-      </tr>
-    </tbody>
-</table>
+<div style="display: flex; align-items: center; justify-content: center;">
+  <table class="inline">
+      <tbody>
+        <tr class="row0">
+          <th class="col0">Key ID</th>
+          <th class="col1">Server Key</th>
+          <th class="col2">Client Key</th>
+        </tr>
+        <tr class="row1">
+          <td class="col0">0</td>
+          <td class="col1">23019</td>
+          <td class="col2">32037</td>
+        </tr>
+        <tr class="row2">
+          <td class="col0">1</td>
+          <td class="col1">32037</td>
+          <td class="col2">29295</td>
+        </tr>
+        <tr class="row3">
+          <td class="col0">2</td>
+          <td class="col1">18789</td>
+          <td class="col2">13603</td>
+        </tr>
+        <tr class="row4">
+          <td class="col0">3</td>
+          <td class="col1">16443</td>
+          <td class="col2">29533</td>
+        </tr>
+        <tr class="row5">
+          <td class="col0">4</td>
+          <td class="col1">18189</td>
+          <td class="col2">21952</td>
+        </tr>
+      </tbody>
+  </table>
+</div>
 
 Každý robot začne komunikaci odesláním svého uživatelského jména (zpráva CLIENT_USERNAME). Uživatelské jméno múže být libovolná sekvence 18 znaků neobsahující sekvenci „\a\b“. V dalším kroku vyzve server klienta k odeslání Key ID (zpráva SERVER_KEY_REQUEST), což je vlastně identifikátor dvojice klíčů, které chce použít pro autentizaci. Klient odpoví zprávou CLIENT_KEY_ID, ve které odešle Key ID. Po té server zná správnou dvojici klíčů, takže může spočítat "hash" kód z uživatelského jména podle následujícího vzorce:
 
