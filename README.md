@@ -1,5 +1,5 @@
 ## BI-PSI
-# <a name="domaci_uloha_c_1_-_tcp_server" id="domaci_uloha_c_1_-_tcp_server">Domácí úloha č. 1 - TCP server</a>
+# <a name="domaci_uloha_c_1_-_tcp_server" id="domaci_uloha_c_1_-_tcp_server">Domácí úloha - TCP server</a>
 
 ## <a name="anotace" id="anotace">Anotace</a>
 
