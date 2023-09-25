@@ -560,10 +560,15 @@ Tento test se spustí automaticky po úspěšném dokončení všech předchozí
 
 Aplikace VirtualBox: [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads "https://www.virtualbox.org/wiki/Downloads")
 
-Obraz s testerm: [bi-psi_2018_task1_v3.ova.zip](https://edux.fit.cvut.cz/courses/BI-PSI/_media/labs/bi-psi_2018_task1_v3.ova.zip "labs:bi-psi_2018_task1_v3.ova.zip")
+Tester: [https://drive.google.com/drive/folders/1QzPyzZeLNWZhjtbaTGehyNu-zgHcInta]([https://www.virtualbox.org/wiki/Downloads](https://drive.google.com/drive/folders/1QzPyzZeLNWZhjtbaTGehyNu-zgHcInta) "Všechny verze testeru ke stažení")
 
-Binárka testeru pro linux: [psi-tester-2018-t1-v3_x86.bz2](https://edux.fit.cvut.cz/courses/BI-PSI/_media/labs/psi-tester-2018-t1-v3_x86.bz2 "labs:psi-tester-2018-t1-v3_x86.bz2")
+Adresář z předchozího linku obsahuje adresáře s vývojovými verzemi testeru. V každém adresáři označeném jako vX (kde X je číslo verze) naleznete následující soubory:
 
-Binárka testeru pro linux (64-bitová verze): [psi-tester-2018-t1-v3_x64.bz2](https://edux.fit.cvut.cz/courses/BI-PSI/_media/labs/psi-tester-2018-t1-v3_x64.bz2 "labs:psi-tester-2018-t1-v3_x64.bz2")
+    BI-PSI_tester_2021_vX.ova - virtuálka s testerem
+    psi-tester-2021-vX_x64.bz2 - verze pro linux 64-bit
+    psi-tester-2021-vX_x86.bz2 - verze pro linux 32-bit
+    psi-tester-2021-vX_arm.bz2 - verze pro arm (použitelné pro uživatele MacBook s procesorem M1 - čtěte dále)
+
+Uživatelé MacBooku s procesorem M1 mají trochu komplikovanější spouštění. Společnost Apple bohužel nedává moc možností jak zkompilovat C++ kód kdekoliv jinde, než v operačním systému MacOS. Tester zkompilovaný pro procesory ARM je kompatiblní s architekturou M1, ale protože je zkompilovaný pro linux, nelze jej nativně spustit. Doporučený způsob testování je použít VirtualBox (viz link výše) a v něm nainstalujte libovolnou linuxou distribuci pro architekturu ARM. Tester pro arm by měl v takto nainstalovaném systému fungovat. (Bohužel nemůžeme připravit image pro ARM, protože nemáme stroj s potřebnou architekturou.)
 
 </div>
