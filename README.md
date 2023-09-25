@@ -179,7 +179,7 @@ Komunikaci s roboty lze rozdělit do několika fází:
 
 ### <a name="autentizace" id="autentizace">Autentizace</a>
 
-<div class="level3" style="color:green">
+<div class="level3">
   
 Server i klient oba znají dvojici autentizačních klíčů (nejedná se o veřejný a soukromý klíč):
 
