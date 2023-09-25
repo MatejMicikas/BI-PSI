@@ -99,39 +99,46 @@ Zprávy klienta:
       <tr class="row1">
         <td class="col0">CLIENT_USERNAME</td>
         <td class="col1"><user name>\a\b</td>
-        <td class="col2">Zpráva s uživatelským jménem. Jméno může být libovolná sekvence znaků kromě kromě dvojice \a\b.</td>
+        <td class="col2">Zpráva s uživatelským jménem. Jméno může být libovolná sekvence znaků kromě kromě dvojice \a\b a nikdy nebude shodné s obsahem zprávy CLIENT_RECHARGING.</td>
         <td class="col3">Umpa_Lumpa\a\b</td>
         <td class="col4">12</td>
       </tr>
       <tr class="row2">
+        <td class="col0">CLIENT_KEY_ID</td>
+        <td class="col1"><Key ID>\a\b</td>
+        <td class="col2">Zpráva obsahující Key ID. Může obsahovat pouze celé číslo o maximálně třech cifrách.</td>
+        <td class="col3">2\a\b</td>
+        <td class="col4">5</td>
+      </tr>
+      <tr class="row3">
         <td class="col0">CLIENT_CONFIRMATION</td>
         <td class="col1"><16-bitové číslo v decimální notaci>\a\b</td>
         <td class="col2">Zpráva s potvrzovacím kódem. Může obsahovat maximálně 5 čísel a ukončovací sekvenci \a\b.</td>
         <td class="col3">1009\a\b</td>
         <td class="col4">7</td>
       </tr>
-      <tr class="row3">
+      <tr class="row4">
         <td class="col0">CLIENT_OK</td>
         <td class="col1">OK <x> <y>\a\b</td>
         <td class="col2">Potvrzení o provedení pohybu, kde _x_ a _y_ jsou souřadnice robota po provedení pohybového příkazu.</td>
         <td class="col3">OK -3 -1\a\b</td>
         <td class="col4">12</td>
       </tr>
-      <tr class="row4">
+      <tr class="row5">
         <td class="col0">CLIENT_RECHARGING</td>
         <td class="col1">RECHARGING\a\b</td>
         <td class="col2">Robot se začal dobíjet a přestal reagovat na zprávy.</td>
         <td class="col3"></td>
         <td class="col4">12</td>
       </tr>
-      <tr class="row5">
+      <tr class="row6">
         <td class="col0">CLIENT_FULL_POWER</td>
         <td class="col1">FULL POWER\a\b</td>
         <td class="col2">Robot doplnil energii a opět příjímá příkazy.</td>
         <td class="col3"></td>
         <td class="col4">12</td>
       </tr>
-      <tr class="row6">
+      <tr class="row7">
         <td class="col0">CLIENT_MESSAGE</td>
         <td class="col1"><text>\a\b</td>
         <td class="col2">Text vyzvednutého tajného vzkazu. Může obsahovat jakékoliv znaky kromě ukončovací sekvence \a\b.</td>
