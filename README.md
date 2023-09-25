@@ -560,7 +560,7 @@ Tento test se spustí automaticky po úspěšném dokončení všech předchozí
 
 Aplikace VirtualBox: [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads "https://www.virtualbox.org/wiki/Downloads")
 
-Tester: [https://drive.google.com/drive/folders/1QzPyzZeLNWZhjtbaTGehyNu-zgHcInta]([https://www.virtualbox.org/wiki/Downloads](https://drive.google.com/drive/folders/1QzPyzZeLNWZhjtbaTGehyNu-zgHcInta) "Všechny verze testeru ke stažení")
+Tester: [Všechny verze testeru ke stažení]([https://www.virtualbox.org/wiki/Downloads](https://drive.google.com/drive/folders/1QzPyzZeLNWZhjtbaTGehyNu-zgHcInta) "[Všechny verze testeru ke stažení](https://www.virtualbox.org/wiki/Downloads](https://drive.google.com/drive/folders/1QzPyzZeLNWZhjtbaTGehyNu-zgHcInta)")
 
 Adresář z předchozího linku obsahuje adresáře s vývojovými verzemi testeru. V každém adresáři označeném jako vX (kde X je číslo verze) naleznete následující soubory:
 
