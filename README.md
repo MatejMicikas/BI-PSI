@@ -179,17 +179,10 @@ Komunikaci s roboty lze rozdělit do několika fází:
 
 ### <a name="autentizace" id="autentizace">Autentizace</a>
 
-<div class="level3">
+<div class="level3" style="color:green">
   
 Server i klient oba znají dvojici autentizačních klíčů (nejedná se o veřejný a soukromý klíč):
 
-<style>
-.tab {
-    display: flex;
-    justify-content: center;
-}
-</style>
-<div class="tab">
   <table class="inline">
       <tbody>
         <tr class="row0">
@@ -224,7 +217,6 @@ Server i klient oba znají dvojici autentizačních klíčů (nejedná se o veř
         </tr>
       </tbody>
   </table>
-</div>
 
 Každý robot začne komunikaci odesláním svého uživatelského jména (zpráva CLIENT_USERNAME). Uživatelské jméno múže být libovolná sekvence 18 znaků neobsahující sekvenci „\a\b“. V dalším kroku vyzve server klienta k odeslání Key ID (zpráva SERVER_KEY_REQUEST), což je vlastně identifikátor dvojice klíčů, které chce použít pro autentizaci. Klient odpoví zprávou CLIENT_KEY_ID, ve které odešle Key ID. Po té server zná správnou dvojici klíčů, takže může spočítat "hash" kód z uživatelského jména podle následujícího vzorce:
 
