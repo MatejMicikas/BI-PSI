@@ -16,8 +16,7 @@ Vytvořte server pro automatické řízení vzdálených robotů. Roboti se sami
 ## <a name="detailni_specifikace" id="detailni_specifikace">Detailní specifikace</a>
 
 <div class="level2">
-Komunikace mezi serverem a roboty je realizována plně textovým protokolem. Každý příkaz je zakončen dvojicí speciálních symbolů „\a\b“. (Jsou to dva znaky '\a' a '\b'.) Server musí dodržet komunikační protokol do detailu přesně, ale musí počítat s nedokonalými firmwary robotů (viz sekce Speciální situace).
-
+Komunikace mezi serverem a roboty je realizována plně textovým protokolem. Každý příkaz je zakončen dvojicí speciálních symbolů „\a\b“. (Jsou to dva znaky '\a' a '\b'.) Server musí dodržet komunikační protokol do detailu přesně, ale musí počítat s nedokonalými firmwary robotů (viz sekce Speciální situace).<br>
 
 Zprávy serveru:
 
@@ -77,6 +76,11 @@ Zprávy serveru:
         <td class="col0">SERVER_LOGIC_ERROR</td>
         <td class="col1">302 LOGIC ERROR\a\b</td>
         <td class="col2">Zpráva odeslaná ve špatné situaci</td>
+      </tr>
+       <tr class="row11">
+        <td class="col0">SERVER_KEY_OUT_OF_RANGE_ERROR</td>
+        <td class="col1">303 KEY OUT OF RANGE\a\b</td>
+        <td class="col2">Key ID není v očekávaném rozsahu</td>
       </tr>
     </tbody>
   </table>
